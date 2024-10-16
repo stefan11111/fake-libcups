@@ -1,0 +1,12 @@
+void* cupsRasterClose () { return 0; }
+void* cupsRasterErrorString () { return 0; }
+void* cupsRasterInitPWGHeader () { return 0; }
+void* cupsRasterInterpretPPD () { return 0; }
+void* cupsRasterOpen () { return 0; }
+void* cupsRasterOpenIO () { return 0; }
+void* cupsRasterReadHeader () { return 0; }
+void* cupsRasterReadHeader2 () { return 0; }
+void* cupsRasterReadPixels () { return 0; }
+void* cupsRasterWriteHeader () { return 0; }
+void* cupsRasterWriteHeader2 () { return 0; }
+void* cupsRasterWritePixels () { return 0; }
