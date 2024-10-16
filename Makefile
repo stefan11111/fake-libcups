@@ -9,7 +9,7 @@ all:
 	${CC} ${XCFLAGS} -fPIC -nostdlib libcupsimage.c -o libcupsimage.so.2 ${LDFLAGS} -shared -Wl,-soname,libcupsimage.so.2
 
 install:
-	mkdir -p ${DESTDIR}/usr/${LIBDIR}
+	mkdir -p ${DESTDIR}/usr${LIBDIR}
 	cp -f libcups.so.2 ${DESTDIR}/usr${LIBDIR}/libcups.so.2
 	ln -rsf ${DESTDIR}/usr${LIBDIR}/libcups.so ${DESTDIR}/usr${LIBDIR}/libcups.so
 	cp -f libcupsimage.so.2 ${DESTDIR}/usr${LIBDIR}/libcupsimage.so.2
@@ -17,7 +17,7 @@ install:
 	mkdir -p ${DESTDIR}/usr/include
 	cp -rf headers ${DESTDIR}/usr/include/cups
 	mkdir -p ${DESTDIR}/usr${LIBDIR}/pkgconfig
-	sed -e 's/__libdir/\${LIBDIR}/g' cups.pc.in > cups.pc
+	sed -e 's/__libdir__/\${LIBDIR}/g' cups.pc.in > cups.pc
 	cp -f cups.pc ${DESTDIR}/usr${LIBDIR}/pkgconfig/cups.pc
 
 uninstall:
