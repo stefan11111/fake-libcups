@@ -17,7 +17,7 @@ install:
 	mkdir -p ${DESTDIR}/usr/include
 	cp -rf headers ${DESTDIR}/usr/include/cups
 	mkdir -p ${DESTDIR}/usr${LIBDIR}/pkgconfig
-	sed -e 's/__libdir/\${LIBDIR}/g' cups.pc.in cups.pc
+	sed -e 's/__libdir/\${LIBDIR}/g' cups.pc.in > cups.pc
 	cp -f cups.pc ${DESTDIR}/usr${LIBDIR}/pkgconfig/cups.pc
 
 uninstall:
