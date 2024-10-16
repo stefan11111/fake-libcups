@@ -8,7 +8,7 @@ all:
 	${CC} ${XCFLAGS} -fPIC -nostdlib libcups.c -o libcups.so.2 ${LDFLAGS} -shared -Wl,-soname,libcups.so.2
 	${CC} ${XCFLAGS} -fPIC -nostdlib libcupsimage.c -o libcupsimage.so.2 ${LDFLAGS} -shared -Wl,-soname,libcupsimage.so.2
 
-install:
+install: all
 	mkdir -p ${DESTDIR}/usr${LIBDIR}
 	cp -f libcups.so.2 ${DESTDIR}/usr${LIBDIR}/libcups.so.2
 	ln -rsf ${DESTDIR}/usr${LIBDIR}/libcups.so ${DESTDIR}/usr${LIBDIR}/libcups.so
